@@ -1,16 +1,17 @@
-<form action='/' method='get'>
-  <input type='text' name='name' autofocus>
-  <button><%= 'Enter name' %></button><br>
-  <input type='text' name='owner' autofocus>
-  <button><%= 'Enter owner' %></button><br>
-  <input type='text' name='due_date' autofocus>
-  <button><%= 'Enter due-date' %></button><br>
-  <input type='text' name='details' autofocus>
-  <button><%= 'Enter details' %></button><br>
-  <input type='text' name='priority' autofocus>
-  <button><%= 'Enter priority' %></button><br>
-  <input type='text' name='assigned_to' autofocus>
-  <button><%= 'Enter assigned-to' %></button><br>
+<form action='/new_task' method='get'>
+  Task name: <input type='text' name='name' autofocus>
+  <br>
+  Task owner: <input type='text' name='owner' autofocus>
+  <br>
+  Due-date:   <input type='date' name='due_date' autofocus>
+  <br>
+  Details:       <input type='text' name='details' autofocus>
+  <br>
+  Priority:       <input type='text' name='priority' autofocus>
+  <br>
+  Assigned-to: <input type='text' name='assigned_to' autofocus>
+  <br>
+  <button><%= 'Create new task!' %></button>
 </form>
 
 

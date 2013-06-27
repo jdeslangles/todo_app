@@ -1,7 +1,5 @@
-filtered by: <%=params[:year]%>
-
 <ul>
   <% @results.each do |result| %> <!-- because it's innumerable, I can iterate it -->
-    <li><img src='<%= result['poster'] %>'></li>
+    <li><%= result['name'] %></li>
   <% end %>
 </ul>
