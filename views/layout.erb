@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='/reset.css'>
+  <link rel='stylesheet' href='/style.css'>
+  <title>ToDo App</title>
+</head>
+<body>
+  <header>
+    <ul>
+      <li><a href='/tasks'><%= 'Task List' %></a></li>
+      <li><a href='/details'><%= 'Task details' %></a></li>
+      <li><a href='/new_task'><%= 'New task' %></a></li>
+      <li><a href='/delete'><%= 'Delete task' %></a></li>
+      <li><a href='/update'><%= 'Update task' %></a></li>
+    </ul>
+  </header>
+
+  <%= yield %>
+</body>
+</html>
