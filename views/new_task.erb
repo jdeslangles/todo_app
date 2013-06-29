@@ -1,5 +1,40 @@
+<header>
+    <ul>
+      <li><a href='/'><%= 'Home' %></a></li>
+      <li><a href='/tasks'><%= 'Task list' %></a></li>
+      <li><a href='/new_task'><%= 'New task' %></a></li>
+    </ul>
+</header>
+<main>
+
+
 <form action='/new_task' method='get'>
-  Task name: <input type='text' name='name' autofocus>
+  <table>
+    <tr>
+      <td>Task name</td>
+      <td><input type='text' name='name' autofocus></td>
+    </tr>
+    <tr>
+      <td>Task owner</td>
+      <td><input type='text' name='owner' autofocus></td>
+    </tr>
+    <tr>
+      <td>Due-date</td>
+      <td><input type='date' name='due_date' autofocus></td>
+    </tr>
+    <tr>
+      <td>Details</td>
+      <td><input type='text' name='details' autofocus></td>
+    </tr>
+    <tr>
+      <td>Priority</td>
+      <td><input type='text' name='priority' autofocus></td>
+    </tr>
+    <tr>
+      <td>Assigned-to</td>
+      <td><input type='text' name='assigned_to' autofocus></td>
+    </tr>
+<!--   Task name: <input type='text' name='name' autofocus>
   <br>
   Task owner: <input type='text' name='owner' autofocus>
   <br>
@@ -10,8 +45,11 @@
   Priority:       <input type='text' name='priority' autofocus>
   <br>
   Assigned-to: <input type='text' name='assigned_to' autofocus>
-  <br>
+   -->
+</table>
+<br>
   <button><%= 'Create new task!' %></button>
 </form>
 
+</main>
 

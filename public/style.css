@@ -1,46 +1,108 @@
 @import url(http://fonts.googleapis.com/css?family=Jacques+Francois+Shadow);
 @import url(http://fonts.googleapis.com/css?family=Jura);
 
-body
-{
-  background-color: #F2E6CE;
+body {
   padding: 25px;
+  background: url(images/background.jpg), repeat;
 }
 
-section
-{
-  float: left;
-  margin-right: 20px;
-  font-family: 'Jura', sans-serif;
-  font-size: 14px;
-  line-height: 25px;
+section {
+  background-color: white;
+  border: 2px, solid;
+  border-radius: 30px;
+  margin: auto;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  width: 600px;
+  height: 700px;
+  padding: 0px;
+}
+
+main {
+  line-height: 1.1;
+  margin: 0 20px 20px 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  border: none;
+}
+
+main div {
+  text-align: center;
+}
+
+#todo {
   width: 300px;
+  height: 300px;
 }
 
-img
-{
-  border: 1px solid #261F1D;
+main #list {
+  line-height: 2;
 }
 
-header
-{
+header {
+  -webkit-border-top-left-radius: 30px;
+  -webkit-border-top-right-radius: 30px;
+  -moz-border-radius-topleft: 30px;
+  -moz-border-radius-topright: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #F2E6CE;
   font-family: 'Jacques Francois Shadow', cursive;
   font-size: 50px;
-  margin-bottom: 30px;
+  border-bottom: dashed  3px;
 }
 
-a
-{
+a {
   color: #261F1D;
   text-decoration: none;
 }
 
-input
-{
+main #list ul li :hover :focus {
+  color:  #cc6633;
+}
+
+input {
   width: 250px;
 }
 
-form
-{
+form {
   margin-bottom: 15px;
+}
+
+ ul {
+  margin: 20px;
+  padding: 20px 0 0 0;
+}
+
+table, td, tr {
+  text-align: center;
+  border: 1px solid black;
+  border-style: double;
+}
+td {
+  padding: 2px;
+}
+#delete {
+  border: 5px, solid, black;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: red;
+  width: 70px;
+}
+#delete a {
+    color: white;
+}
+
+#update {
+  border: 1px, solid;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: green;
+  width: 90px;}
+
+#update a {
+    color: white;
 }

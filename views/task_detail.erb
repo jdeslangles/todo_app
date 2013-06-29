@@ -1,0 +1,45 @@
+<header>
+    <ul>
+      <li><a href='/'><%= 'Home' %></a></li>
+      <li><a href='/tasks'><%= 'Task list' %></a></li>
+      <li><a href='/new_task'><%= 'New task' %></a></li>
+    </ul>
+</header>
+<main>
+  <h3>Task details</h3>
+   <% @result.each do |result| %>
+    <table>
+      <tr>
+        <td>TASK NAME</td>
+        <td><%= result['name'] %></td>
+      </tr>
+      <tr>
+        <td>TASK OWNER</td>
+        <td><%= result['owner'] %></td>
+      </tr>
+      <tr>
+        <td>DUE DATE</td>
+        <td><%= result['due_date'] %></td>
+      </tr>
+      <tr>
+        <td>DETAILS</td>
+        <td><%= result['details'] %></td>
+      </tr>
+      <tr>
+        <td>PRIORITY</td>
+        <td><%= result['priority'] %></td>
+      </tr>
+      <tr>
+        <td>ASSIGNED TO</td>
+        <td><%= result['assigned_to'] %></td>
+      </tr>
+      <br>
+    </table>
+    <br>
+ <!--    <p>Would you like to update this task?<p>
+      <div id="update"><a href='/tasks/<%=result['id']%>/task_update'>Update!</a></div> -->
+    <p>Would you like to delete this task?</p>
+    <div id="delete"><a href='/tasks/<%=result['id']%>/task_delete'>Delete!</a></div>
+  <% end %>
+</main>
+

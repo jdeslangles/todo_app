@@ -1,5 +1,21 @@
-<ul>
-  <% @results.each do |result| %> <!-- because it's innumerable, I can iterate it -->
-    <li><%= result['name'] %></li>
-  <% end %>
-</ul>
+<header>
+    <ul>
+      <li><a href='/'><%= 'Home' %></a></li>
+      <li><a href='/tasks'><%= 'Task list' %></a></li>
+      <li><a href='/new_task'><%= 'New task' %></a></li>
+    </ul>
+</header>
+
+<main>
+  <div id="list">
+    <ul>
+      <% @results.each do |result| %> <!-- because it's innumerable, I can iterate it -->
+          <li>
+          <a href="/tasks/<%=result['id']%>">
+            <%= result['name'] %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</main>

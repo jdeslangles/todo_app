@@ -1,0 +1,69 @@
+<header>
+    <ul>
+      <li><a href='/'><%= 'Home' %></a></li>
+      <li><a href='/tasks'><%= 'Task list' %></a></li>
+      <li><a href='/new_task'><%= 'New task' %></a></li>
+    </ul>
+</header>
+<main>
+  <h3>Task details</h3>
+   <% @result.each do |result| %>
+    <table>
+      <tr>
+        <td>TASK NAME</td>
+        <td><%= result['name'] %></td>
+      </tr>
+      <tr>
+        <td>TASK OWNER</td>
+        <td><%= result['owner'] %></td>
+      </tr>
+      <tr>
+        <td>DUE DATE</td>
+        <td><%= result['due_date'] %></td>
+      </tr>
+      <tr>
+        <td>DETAILS</td>
+        <td><%= result['details'] %></td>
+      </tr>
+      <tr>
+        <td>PRIORITY</td>
+        <td><%= result['priority'] %></td>
+      </tr>
+      <tr>
+        <td>ASSIGNED TO</td>
+        <td><%= result['assigned_to'] %></td>
+      </tr>
+      <br>
+    </table>
+<br>
+  <form action='tasks/:id/task_update' method='get'>
+  <table>
+    <tr>
+      <td>NEW task name</td>
+      <td><input type='text' name='name' autofocus></td>
+    </tr>
+    <tr>
+      <td>NEW task owner</td>
+      <td><input type='text' name='owner' autofocus></td>
+    </tr>
+    <tr>
+      <td>NEW due-date</td>
+      <td><input type='date' name='due_date' autofocus></td>
+    </tr>
+    <tr>
+      <td>NEW details</td>
+      <td><input type='text' name='details' autofocus></td>
+    </tr>
+    <tr>
+      <td>NEW priority</td>
+      <td><input type='text' name='priority' autofocus></td>
+    </tr>
+    <tr>
+      <td>NEW assigned-to</td>
+      <td><input type='text' name='assigned_to' autofocus></td>
+    </tr>
+</table>
+<br>
+  <button><%= 'Update task!' %></button>
+</form>
+<%end%>

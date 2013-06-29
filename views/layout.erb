@@ -7,17 +7,8 @@
   <title>ToDo App</title>
 </head>
 <body>
-  <header>
-    <ul>
-      <li><a href='/'><%= 'Home' %></a></li>
-      <li><a href='/tasks'><%= 'Task List' %></a></li>
-      <li><a href='/details'><%= 'Task details' %></a></li>
-      <li><a href='/new_task'><%= 'New task' %></a></li>
-      <li><a href='/delete'><%= 'Delete task' %></a></li>
-      <li><a href='/update'><%= 'Update task' %></a></li>
-    </ul>
-  </header>
-
+  <section>
   <%= yield %>
+</section>
 </body>
 </html>
